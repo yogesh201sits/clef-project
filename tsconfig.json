@@ -19,12 +19,29 @@
     "strict": true,
     "skipLibCheck": true,
     "noFallthroughCasesInSwitch": true,
+    "ignoreDeprecations": "6.0",
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
 
     // Some stricter flags (disabled by default)
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "noPropertyAccessFromIndexSignature": false
-  }
+    "noPropertyAccessFromIndexSignature": false,
+    "baseUrl": ".",
+    "paths": {
+      "@nova/clef": ["packages/clef/src/index.ts"],
+      "@nova/triage": ["packages/triage/src/index.ts"],
+      "@nova/database": ["packages/database/src/index.ts"],
+      "@nova/shared": ["packages/shared/src/index.ts"]
+    }
+  },
+  "include": [
+    "apps/**/*.ts",
+    "apps/**/*.tsx",
+    "packages/**/*.ts",
+    "packages/**/*.tsx",
+    "packages/clef/src/**/*.ts",
+    "index.ts"
+  ],
+  "exclude": ["node_modules"]
 }

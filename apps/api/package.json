@@ -1,0 +1,17 @@
+{
+  "name": "@nova/api",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "bun --watch src/index.ts",
+    "start": "bun src/index.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "@hono/node-server": "^2.1.4",
+    "@nova/triage": "workspace:*",
+    "dotenv": "^18.0.7",
+    "hono": "^4.13.13",
+    "zod": "^4.6.6"
+  }
+}

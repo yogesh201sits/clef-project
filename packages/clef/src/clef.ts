@@ -1,3 +1,4 @@
+
 import { RunnableLambda } from "@langchain/core/runnables";
 
 export type ClefState =
@@ -44,22 +45,15 @@ interface CloudflareResponse<T> {
 export function createClefRunnable() {
   return new RunnableLambda<ClefInput, unknown>({
     func: async (input: ClefInput) => {
-      const accountId =
-        process.env.CLOUDFLARE_ACCOUNT_ID;
-
-      const apiToken =
-        process.env.CLOUDFLARE_API_TOKEN;
+      const accountId = process.env.CLOUDFLARE_ACCOUNT_ID;
+      const apiToken = process.env.CLOUDFLARE_API_TOKEN;
 
       if (!accountId) {
-        throw new Error(
-          "CLOUDFLARE_ACCOUNT_ID is missing",
-        );
+        throw new Error("CLOUDFLARE_ACCOUNT_ID is missing");
       }
 
       if (!apiToken) {
-        throw new Error(
-          "CLOUDFLARE_API_TOKEN is missing",
-        );
+        throw new Error("CLOUDFLARE_API_TOKEN is missing");
       }
 
       const url =
@@ -78,8 +72,15 @@ export function createClefRunnable() {
         }),
       });
 
-      const data =
-        (await response.json()) as CloudflareResponse<unknown>;
+      let data: CloudflareResponse<unknown>;
+
+      try {
+        data = (await response.json()) as CloudflareResponse<unknown>;
+      } catch {
+        throw new Error(
+          `Cloudflare AI returned invalid JSON (HTTP ${response.status})`,
+        );
+      }
 
       if (!response.ok || !data.success) {
         throw new Error(
