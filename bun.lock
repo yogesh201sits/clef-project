@@ -52,6 +52,9 @@
         "dotenv": "^18.0.7",
       },
     },
+    "packages/shared": {
+      "name": "@nova/shared",
+    },
     "packages/triage": {
       "name": "@nova/triage",
       "dependencies": {
@@ -237,6 +240,8 @@
     "@nova/api": ["@nova/api@workspace:apps/api"],
 
     "@nova/clef": ["@nova/clef@workspace:packages/clef"],
+
+    "@nova/shared": ["@nova/shared@workspace:packages/shared"],
 
     "@nova/triage": ["@nova/triage@workspace:packages/triage"],
 
