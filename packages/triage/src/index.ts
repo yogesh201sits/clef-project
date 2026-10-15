@@ -1,0 +1,1 @@
+export { triageIncident } from "./triage";

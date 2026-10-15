@@ -7,8 +7,8 @@
     "packages/*"
   ],
   "scripts": {
-    "dev:api": "bun --cwd apps/api --watch src/index.ts",
-    "dev:playground": "bun --cwd apps/playground run dev",
+    "dev:api": "bun run --filter @nova/api dev",
+    "dev:playground": "bun run --filter playground dev",
     "dev": "bun run --parallel dev:api dev:playground",
     "typecheck": "tsc --noEmit",
     "test": "bun test"
