@@ -1,11 +1,18 @@
-# Nova — Intelligent Incident Triage
+<img width="1000" alt="Nova Logo" src="https://github.com/user-attachments/assets/8a0403dd-8f22-4a2e-843a-f6c8631611bb" />
+<div align="center">
 
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Bun](https://img.shields.io/badge/Bun-000000?style=for-the-badge&logo=bun&logoColor=white)
-![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=chainlink&logoColor=white)
-![Cloudflare](https://img.shields.io/badge/Cloudflare_Clef-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)
-![Hono](https://img.shields.io/badge/Hono-E36002?style=for-the-badge&logo=hono&logoColor=white)
-![Zod](https://img.shields.io/badge/Zod-3E67B1?style=for-the-badge&logo=zod&logoColor=white)
+  <h1>Nova — Intelligent Incident Triage</h1>
+
+  <p>
+    <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+    <img src="https://img.shields.io/badge/Bun-000000?style=for-the-badge&logo=bun&logoColor=white" alt="Bun" />
+    <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=chainlink&logoColor=white" alt="LangChain" />
+    <img src="https://img.shields.io/badge/Cloudflare_Clef-F38020?style=for-the-badge&logo=cloudflare&logoColor=white" alt="Cloudflare Clef" />
+    <img src="https://img.shields.io/badge/Hono-E36002?style=for-the-badge&logo=hono&logoColor=white" alt="Hono" />
+    <img src="https://img.shields.io/badge/Zod-3E67B1?style=for-the-badge&logo=zod&logoColor=white" alt="Zod" />
+  </p>
+
+</div>
 
 Nova is an AI-powered incident triage platform that analyzes operational alerts, classifies their severity, identifies the most appropriate response team, and determines whether immediate attention is required.
 
